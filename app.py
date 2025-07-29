@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import Flask, redirect, url_for,render_template
 
-app = Flask(__name__)
+app = Flask(__name__,static_folder='static')
 
 @app.route('/')
 def home():
