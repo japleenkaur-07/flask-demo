@@ -7,6 +7,7 @@ app = Flask(__name__)
 def home():
     return render_template('web.html')
 @app.route("/japleen")
+def japleeen():
     return "<h1>I LOVE YOU JAPLEEN</h1>"
 if __name__ == '__main__':
     app.run(debug=True)
