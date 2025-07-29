@@ -1,125 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sikh Gurus</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Khanda.svg/1200px-Khanda.svg.png');
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-color: rgb(22, 21, 21);
-            color: white;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sikh Gurus</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Khanda.svg/1200px-Khanda.svg.png');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-color: rgb(22, 21, 21);
+      color: white;
+    }
 
-        .overlay {
-            background-color: rgba(0, 0, 0, 0.75);
-            padding: 40px;
-            text-align: center;
-        }
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 40px 20px;
+      flex-wrap: wrap;
+      gap: 30px;
+      background-color: rgba(0, 0, 0, 0.75);
+    }
 
-        .gurus-section {
-            padding: 40px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
+    .logo-container img {
+      width: 15vw;
+      height: 15vw;
+      min-width: 100px;
+      min-height: 100px;
+      max-width: 200px;
+      max-height: 200px;
+      border-radius: 100%;
+      border: 2px solid white;
+      object-fit: cover;
+    }
 
-        .guru-card {
-            background-color: rgba(255, 255, 255, 0.1);
-            border: 1px solid white;
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-        }
+    .overlay {
+      flex: 1;
+      min-width: 250px;
+    }
 
-        .guru-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
+    .overlay h1 {
+      font-size: 3em;
+      margin: 0;
+    }
 
-        a {
-            color: #ffdd57;
-            text-decoration: none;
-        }
+    .overlay p {
+      font-size: 1.2em;
+      margin: 10px 0 0;
+    }
 
-        a:hover {
-            text-decoration: underline;
-        }
+    .gurus-section {
+      padding: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
 
-        h1 {
-            font-size: 3em;
-        }
+    .guru-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid white;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
 
-        p {
-            font-size: 1.2em;
-        }
-    </style>
+    .guru-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    a {
+      color: #ffdd57;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    h3 {
+      margin: 15px 0 10px;
+    }
+
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+
+      .overlay h1 {
+        font-size: 2em;
+      }
+
+      .overlay p {
+        font-size: 1em;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="overlay">
-        <h1>Welcome to Sikh Heritage</h1>
-        <p>Learn about the Ten Sikh Gurus</p>
-    </div>
 
-    <div class="gurus-section">
-        <div class="guru-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Mural_painting_of_Guru_Nanak_from_Gurdwara_Baba_Atal_Rai.jpg/500px-Mural_painting_of_Guru_Nanak_from_Gurdwara_Baba_Atal_Rai.jpg">
-            <h3>Guru Nanak Dev Ji</h3>
-            <a href="https://en.wikipedia.org/wiki/Guru_Nanak" >Read Biography</a>
-        </div>
-        <div class="guru-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Guru_Angad_miniature_painting.jpg/500px-Guru_Angad_miniature_painting.jpg">
-            <h3>Guru Angad Dev Ji</h3>
-            <a href="https://en.wikipedia.org/wiki/Guru_Angad" >Read Biography</a>
-        </div>
-        <div class="guru-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/18th_century_painting_of_Guru_Amar_Das.jpg/500px-18th_century_painting_of_Guru_Amar_Das.jpg">
-            <h3>Guru Amar Das Ji</h3>
-            <a href="https://en.wikipedia.org/wiki/Guru_Amar_Das" >Read Biography</a>
-        </div>
-        <div class="guru-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Guru_Ram_Das_miniature_painting.jpg/500px-Guru_Ram_Das_miniature_painting.jpg">
-            <h3>Guru Ram Das Ji</h3>
-            <a href="https://en.wikipedia.org/wiki/Guru_Ram_Das" >Read Biography</a>
-        </div>
-        <div class="guru-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Guru_Arjan.jpg" alt="Guru Arjan Dev Ji">
-            <h3>Guru Arjan Dev Ji</h3>
-            <a href="https://en.wikipedia.org/wiki/Guru_Arjan" >Read Biography</a>
-        </div>
-        <div class="guru-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Contemporary_painting_of_the_sixth_Sikh_guru%2C_Guru_Hargobind._Provincial_Mughal_school%2C_Deccan%2C_mid-17th_century.jpg/500px-Contemporary_painting_of_the_sixth_Sikh_guru%2C_Guru_Hargobind._Provincial_Mughal_school%2C_Deccan%2C_mid-17th_century.jpg">
-            <h3>Guru Hargobind Ji</h3>
-            <a href="https://en.wikipedia.org/wiki/Guru_Hargobind" >Read Biography</a>
-        </div>
-        <div class="guru-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Guru_Har_Rai%2C_Guler-Basohli_painting.jpg/500px-Guru_Har_Rai%2C_Guler-Basohli_painting.jpg" alt="Guru Har Rai Ji">
-            <h3>Guru Har Rai Ji</h3>
-            <a href="https://en.wikipedia.org/wiki/Guru_Har_Rai" >Read Biography</a>
-        </div>
-        <div class="guru-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Painting_of_the_eighth_Guru_of_the_Sikhs%2C_Guru_Har_Krishan%2C_seated_on_a_platform_and_leaning_against_a_bolster_with_a_red-coloured_backdrop.jpg/500px-Painting_of_the_eighth_Guru_of_the_Sikhs%2C_Guru_Har_Krishan%2C_seated_on_a_platform_and_leaning_against_a_bolster_with_a_red-coloured_backdrop.jpg" alt="Guru Har Krishan Ji">
-            <h3>Guru Har Krishan Ji</h3>
-            <a href="https://en.wikipedia.org/wiki/Guru_Har_Krishan" >Read Biography</a>
-        </div>
-        <div class="guru-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Contemporary_painting_of_Guru_Tegh_Bahadur_by_Ahsan%2C_ca.1667%E2%80%9368_%28detail%29.jpg/960px-Contemporary_painting_of_Guru_Tegh_Bahadur_by_Ahsan%2C_ca.1667%E2%80%9368_%28detail%29.jpg" alt="Guru Tegh Bahadur Ji">
-            <h3>Guru Tegh Bahadur Ji</h3>
-            <a href="https://en.wikipedia.org/wiki/Guru_Tegh_Bahadur" >Read Biography</a>
-        </div>
-        <div class="guru-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Guru_Gobind_Singh_contemporary_painting.jpg/500px-Guru_Gobind_Singh_contemporary_painting.jpg" alt="Guru Gobind Singh Ji">
-            <h3>Guru Gobind Singh Ji</h3>
-            <a href="https://en.wikipedia.org/wiki/Guru_Gobind_Singh" >Read Biography</a>
-        </div>
+  <div class="header-container">
+    <div class="logo-container">
+      <img src="image\logo.png" alt="Sikh Logo">
     </div>
+    <div class="overlay">
+      <h1>Welcome to Sikh Heritage</h1>
+      <p>Learn about the Ten Sikh Gurus </p>
+    </div>
+  </div>
+
+  <div class="gurus-section">
+    <div class="guru-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Mural_painting_of_Guru_Nanak_from_Gurdwara_Baba_Atal_Rai.jpg/500px-Mural_painting_of_Guru_Nanak_from_Gurdwara_Baba_Atal_Rai.jpg" alt="Guru Nanak Dev Ji">
+      <h3>Guru Nanak Dev Ji</h3>
+      <a href="https://en.wikipedia.org/wiki/Guru_Nanak" >Read Biography</a>
+    </div>
+    <div class="guru-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Guru_Angad_miniature_painting.jpg/500px-Guru_Angad_miniature_painting.jpg" alt="Guru Angad Dev Ji">
+      <h3>Guru Angad Dev Ji</h3>
+      <a href="https://en.wikipedia.org/wiki/Guru_Angad" >Read Biography</a>
+    </div>
+    <div class="guru-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/18th_century_painting_of_Guru_Amar_Das.jpg/500px-18th_century_painting_of_Guru_Amar_Das.jpg" alt="Guru Amar Das Ji">
+      <h3>Guru Amar Das Ji</h3>
+      <a href="https://en.wikipedia.org/wiki/Guru_Amar_Das" >Read Biography</a>
+    </div>
+    <div class="guru-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Guru_Ram_Das_miniature_painting.jpg/500px-Guru_Ram_Das_miniature_painting.jpg" alt="Guru Ram Das Ji">
+      <h3>Guru Ram Das Ji</h3>
+      <a href="https://en.wikipedia.org/wiki/Guru_Ram_Das" >Read Biography</a>
+    </div>
+    <div class="guru-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Guru_Arjan.jpg" alt="Guru Arjan Dev Ji">
+      <h3>Guru Arjan Dev Ji</h3>
+      <a href="https://en.wikipedia.org/wiki/Guru_Arjan" >Read Biography</a>
+    </div>
+    <div class="guru-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Contemporary_painting_of_the_sixth_Sikh_guru%2C_Guru_Hargobind._Provincial_Mughal_school%2C_Deccan%2C_mid-17th_century.jpg/500px-Contemporary_painting_of_the_sixth_Sikh_guru%2C_Guru_Hargobind._Provincial_Mughal_school%2C_Deccan%2C_mid-17th_century.jpg" alt="Guru Hargobind Ji">
+      <h3>Guru Hargobind Ji</h3>
+      <a href="https://en.wikipedia.org/wiki/Guru_Hargobind" >Read Biography</a>
+    </div>
+    <div class="guru-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Guru_Har_Rai%2C_Guler-Basohli_painting.jpg/500px-Guru_Har_Rai%2C_Guler-Basohli_painting.jpg" alt="Guru Har Rai Ji">
+      <h3>Guru Har Rai Ji</h3>
+      <a href="https://en.wikipedia.org/wiki/Guru_Har_Rai" >Read Biography</a>
+    </div>
+    <div class="guru-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Painting_of_the_eighth_Guru_of_the_Sikhs%2C_Guru_Har_Krishan%2C_seated_on_a_platform_and_leaning_against_a_bolster_with_a_red-coloured_backdrop.jpg/500px-Painting_of_the_eighth_Guru_of_the_Sikhs%2C_Guru_Har_Krishan%2C_seated_on_a_platform_and_leaning_against_a_bolster_with_a_red-coloured_backdrop.jpg" alt="Guru Har Krishan Ji">
+      <h3>Guru Har Krishan Ji</h3>
+      <a href="https://en.wikipedia.org/wiki/Guru_Har_Krishan" >Read Biography</a>
+    </div>
+    <div class="guru-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Contemporary_painting_of_Guru_Tegh_Bahadur_by_Ahsan%2C_ca.1667%E2%80%9368_%28detail%29.jpg/960px-Contemporary_painting_of_Guru_Tegh_Bahadur_by_Ahsan%2C_ca.1667%E2%80%9368_%28detail%29.jpg" alt="Guru Tegh Bahadur Ji">
+      <h3>Guru Tegh Bahadur Ji</h3>
+      <a href="https://en.wikipedia.org/wiki/Guru_Tegh_Bahadur" >Read Biography</a>
+    </div>
+    <div class="guru-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Guru_Gobind_Singh_contemporary_painting.jpg/500px-Guru_Gobind_Singh_contemporary_painting.jpg" alt="Guru Gobind Singh Ji">
+      <h3>Guru Gobind Singh Ji</h3>
+      <a href="https://en.wikipedia.org/wiki/Guru_Gobind_Singh" >Read Biography</a>
+    </div>
+  </div>
+
 </body>
 </html>
