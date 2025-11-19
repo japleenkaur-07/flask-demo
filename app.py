@@ -1,18 +1,3 @@
-from flask import Flask
-from flask import Flask, redirect, url_for,render_template
-
-app = Flask(__name__,static_folder='static')
-
-@app.route('/')
-def home():
-    return render_template('index.html')
-@app.route("/japleen")
-def japleeen():
-    return "<h1>I LOVE YOU JAPLEEN</h1>"
-if __name__ == '__main__':
-    app.run(debug=True)
-## to create requirments.txt file do pip freeze > requirements.txt
-## to install requirments.txt do pip install -r requirements.txt
 # server.py
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
@@ -58,9 +43,9 @@ def home():
 def test():
     return jsonify({"ok": True, "message": "API reachable"})
 
-@app.route("/sikh")
+@app.route("/")
 def sahil_page():  # unique function name
-    return render_template("web.html")
+    return render_template("index.html")
 
 @app.route("/send_alert_email", methods=["POST"])
 def send_alert_email():
@@ -89,4 +74,3 @@ def send_alert_email():
 if __name__ == "__main__":
     print(f"Starting Flask server on port {PORT}")
     app.run(host="0.0.0.0", port=PORT, debug=True)
-
