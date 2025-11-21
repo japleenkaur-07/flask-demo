@@ -124,7 +124,9 @@
 
 <script>
 // ========== CONFIG ==========
-const EMAIL_SERVER_URL = "http://localhost:5000/send_alert_email";
+// Use relative endpoint when page is served via HTTP(S).
+// If user opens file:// in browser (development), fallback to localhost server.
+const EMAIL_SERVER_URL = (location.protocol === 'file:') ? "http://localhost:5000/send_alert_email" : "/send_alert_email";
 const API_KEY = "some_secret_key_here";
 // ==========
 
